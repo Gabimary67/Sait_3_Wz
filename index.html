@@ -1,36 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toka - Crypto Trading</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <!-- Header -->
     <header>
         <div class="container">
             <div class="logo">
                 Toka
             </div>
-            <nav>
-                <ul>
+            <nav class="nav-menu">
+                <ul class="nav-list">
                     <li><a href="#">NFT <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.97168 0.913025L5.22168 5.16303L9.47168 0.913025" stroke="#777E90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
                     <li><a href="#">Crypto <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.97168 0.913025L5.22168 5.16303L9.47168 0.913025" stroke="#777E90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
                     <li><a href="#">About Us <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.97168 0.913025L5.22168 5.16303L9.47168 0.913025" stroke="#777E90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
                     <li><a href="#">Our Team <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.97168 0.913025L5.22168 5.16303L9.47168 0.913025" stroke="#777E90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
                     <li><a href="#">Contact Us <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.97168 0.913025L5.22168 5.16303L9.47168 0.913025" stroke="#777E90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-                    <li><a href="#">Online Shop <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.97168 0.913025L5.22168 5.16303L9.47168 0.913025" stroke="#777E90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>                    <li><a href="#">Blog <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.97168 0.913025L5.22168 5.16303L9.47168 0.913025" stroke="#777E90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                    <li><a href="#">Online Shop <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.97168 0.913025L5.22168 5.16303L9.47168 0.913025" stroke="#777E90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                    <li><a href="#">Blog <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.97168 0.913025L5.22168 5.16303L9.47168 0.913025" stroke="#777E90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
                     <li><a href="#" class="buy-now">Buy Now</a></li>
                 </ul>
             </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
                 <div class="hero-text">
@@ -40,7 +48,7 @@
                         </svg>
                         Наша команда более полутора лет занималась
                     </p>
-                    <h1>разработкой алгоритма <br> арбитража на децентрализованных биржах (DEX). </h1>
+                    <h1>разработкой алгоритма <span class="break-line">арбитража на децентрализованных биржах (DEX).</span></h1>
                     <p class="description">Объединив опыт профессиональных трейдеров и талантливых разработчиков, мы создали уникальный продукт, который позволяет стабильно получать прибыль на криптовалютном арбитраже.</p>
                     <a href="#" class="button">Get started</a>
                 </div>
@@ -50,7 +58,7 @@
             </div>
         </section>
 
-        <!-- БЛОК: Как это работает -->
+        <!-- How It Works Section -->
         <section class="how-it-works">
             <div class="container">
                 <div class="how-it-works-cards">
@@ -85,15 +93,14 @@
             </div>
         </section>
 
-        <!-- БЛОК: What We Do -->
+        <!-- What We Do Section -->
         <section class="what-we-do">
             <div class="container">
                 <div class="what-we-do-content">
                     <div class="what-we-do-text">
                         <h2>Результат</h2>
                         <h3>Благодаря точным алгоритмам и продуманной стратегии</h3>
-                        <p>наш продукт помогает трейдерам получать стабильную доходность,
-                            используя возможности рынка децентрализованных бирж — быстро, безопасно и эффективно.</p>
+                        <p>наш продукт помогает трейдерам получать стабильную доходность, используя возможности рынка децентрализованных бирж — быстро, безопасно и эффективно.</p>
                         <a href="#" class="button">Узнать больше</a>
                     </div>
                     <div class="what-we-do-image">
@@ -102,178 +109,174 @@
                 </div>
             </div>
         </section>
-<!-- БЛОК: Features -->
-<section class="features">
-    <div class="container">
-        <div class="features-header">
-            <h2>Как это работает</h2>
-            <p>Cryptocurrency markets have seen an increase in volume in recent weeks, which is a great opportunity for new traders.</p>
-        </div>
-        <div class="features-cards">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <img src="app03r34.png" alt="Download App">
-                </div>
-                <div class="feature-content">
-                    <h4>Минимум времени</h4>
-                    <p> на одну сделку требуется всего 5–10 минут.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <img src="cryptomining-hit.png" alt="Register">
-                </div>
-                <div class="feature-content">
-                    <h4>Удобство</h4>
-                    <p>все операции можно выполнять прямо с телефона.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <img src="crypto-wallet-hit.png"Connect Wallet">
-                </div>
-                <div class="feature-content">
-                    <h4>Безопасность</h4>
-                    <p>вы совершаете сделки со своего личного кошелька, без передачи доступа третьим лицам.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <img src="crypto-trading-hit.png" alt="Start Trading">
-                </div>
-                <div class="feature-content">
-                    <h4>Прозрачность</h4>
-                    <p>наша команда формирует сигналы только на основе данных известных и проверенных DEX-площадок.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- БЛОК: Testimonials -->
-<section class="testimonials">
-    <div class="container">
-        <div class="testimonials-header">
-            <h2>TESTIMONIALS</h2>
-            <h3>Millions of users around the world</h3>
-            <p>It's an exciting time to become a trader.</p>
-            <a href="#" class="button">Learn more</a>
-        </div>
-        <div class="testimonials-cards">
-            <div class="testimonial-card">
-                <div class="stars">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="testimonial-text">"Great! This is one of the best apps I have ever used before."</p>
-                <div class="author">
-                    <div class="author-avatar">
-                        <img src="100-testimonial.png" alt="Adam Watson">
-                    </div>
-                    <div class="author-info">
-                        <h4>Adam Watson</h4>
-                        <span>Barista</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="stars">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="testimonial-text">"Great! Compared to everything else I've ever used, this is the best app."</p>
-                <div class="author">
-                    <div class="author-avatar">
-                        <img src="45-testimonial.png" alt="Lisa Smith">
-                    </div>
-                    <div class="author-info">
-                        <h4>Lisa Smith</h4>
-                        <span>Designer</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="stars">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="testimonial-text">"Great! This is one of the best apps I have ever used before."</p>
-                <div class="author">
-                    <div class="author-avatar">
-                        <img src="98-testimonial.png" alt="Nick Green">
-                    </div>
-                    <div class="author-info">
-                        <h4>Nick Green</h4>
-                        <span>Developer</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- БЛОК: Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <!-- Левая колонка - Логотип и описание -->
-            <div class="footer-column">
-                <div class="footer-logo">Toka</div>
-                <p class="footer-description">
-                    Reinventing the way of creating websites, we aim to create the most master-peaced WordPress theme available on the market.
-                </p>
-            </div>
 
-            <!-- Центральная колонка - Контакты -->
-            <div class="footer-column">
-                <h3 class="footer-title">CONTACT US</h3>
-                <div class="contact-info">
-                    <p class="contact-address">202 Helga Springs Rd, Crawford, TN 38554</p>
-                    <p class="contact-phone">Call Us: <strong>800.275.8777</strong></p>
-                    <a href="mailto:alex@company.com" class="contact-email">alex@company.com</a>
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="features-header">
+                    <h2>Как это работает</h2>
+                    <p>Cryptocurrency markets have seen an increase in volume in recent weeks, which is a great opportunity for new traders.</p>
+                </div>
+                <div class="features-cards">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="app03r34.png" alt="Download App">
+                        </div>
+                        <div class="feature-content">
+                            <h4>Минимум времени</h4>
+                            <p>на одну сделку требуется всего 5–10 минут.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="cryptomining-hit.png" alt="Register">
+                        </div>
+                        <div class="feature-content">
+                            <h4>Удобство</h4>
+                            <p>все операции можно выполнять прямо с телефона.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="crypto-wallet-hit.png" alt="Connect Wallet">
+                        </div>
+                        <div class="feature-content">
+                            <h4>Безопасность</h4>
+                            <p>вы совершаете сделки со своего личного кошелька, без передачи доступа третьим лицам.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="crypto-trading-hit.png" alt="Start Trading">
+                        </div>
+                        <div class="feature-content">
+                            <h4>Прозрачность</h4>
+                            <p>наша команда формирует сигналы только на основе данных известных и проверенных DEX-площадок.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Правая колонка - Подписка -->
-            <div class="footer-column">
-                <h3 class="footer-title">SIGN UP FOR EMAIL UPDATES</h3>
-                <form class="subscribe-form">
-                    <div class="form-group">
-                        <input type="email" placeholder="Your e-mail address" class="email-input" required>
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="testimonials-header">
+                    <h2>TESTIMONIALS</h2>
+                    <h3>Millions of users around the world</h3>
+                    <p>It's an exciting time to become a trader.</p>
+                    <a href="#" class="button">Learn more</a>
+                </div>
+                <div class="testimonials-cards">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">"Great! This is one of the best apps I have ever used before."</p>
+                        <div class="author">
+                            <div class="author-avatar">
+                                <img src="100-testimonial.png" alt="Adam Watson">
+                            </div>
+                            <div class="author-info">
+                                <h4>Adam Watson</h4>
+                                <span>Barista</span>
+                            </div>
+                        </div>
                     </div>
-                    <button type="submit" class="subscribe-btn">Subscribe</button>
-                </form>
-                <p class="subscribe-text">
-                    Sign up with your email address to receive news and updates
-                </p>
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">"Great! Compared to everything else I've ever used, this is the best app."</p>
+                        <div class="author">
+                            <div class="author-avatar">
+                                <img src="45-testimonial.png" alt="Lisa Smith">
+                            </div>
+                            <div class="author-info">
+                                <h4>Lisa Smith</h4>
+                                <span>Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">"Great! This is one of the best apps I have ever used before."</p>
+                        <div class="author">
+                            <div class="author-avatar">
+                                <img src="98-testimonial.png" alt="Nick Green">
+                            </div>
+                            <div class="author-info">
+                                <h4>Nick Green</h4>
+                                <span>Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Нижняя часть футера -->
-        <div class="footer-bottom">
-            <div class="footer-copyright">
-                Copyright ©2025 Toka. All rights reserved.
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <div class="footer-logo">Toka</div>
+                        <p class="footer-description">
+                            Reinventing the way of creating websites, we aim to create the most master-peaced WordPress theme available on the market.
+                        </p>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-title">CONTACT US</h3>
+                        <div class="contact-info">
+                            <p class="contact-address">202 Helga Springs Rd, Crawford, TN 38554</p>
+                            <p class="contact-phone">Call Us: <strong>800.275.8777</strong></p>
+                            <a href="mailto:alex@company.com" class="contact-email">alex@company.com</a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-title">SIGN UP FOR EMAIL UPDATES</h3>
+                        <form class="subscribe-form">
+                            <div class="form-group">
+                                <input type="email" placeholder="Your e-mail address" class="email-input" required>
+                            </div>
+                            <button type="submit" class="subscribe-btn">Subscribe</button>
+                        </form>
+                        <p class="subscribe-text">
+                            Sign up with your email address to receive news and updates
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-copyright">
+                        Copyright ©2025 Toka. All rights reserved.
+                    </div>
+                    <nav class="footer-nav">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</footer>
+        </footer>
     </main>
 
     <script src="main.js"></script>

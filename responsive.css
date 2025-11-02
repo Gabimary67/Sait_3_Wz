@@ -1,0 +1,580 @@
+/* Mobile First Responsive Design */
+
+/* Tablets and Small Desktops */
+@media (max-width: 1024px) {
+    .hero-text h1 {
+        font-size: 48px;
+    }
+    
+    .what-we-do-text h3 {
+        font-size: 36px;
+    }
+    
+    .testimonials-header h3 {
+        font-size: 32px;
+    }
+    
+    .features-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .feature-card {
+        min-height: 250px;
+        padding: 30px 20px;
+    }
+    
+    .feature-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+    }
+    
+    .testimonials-cards {
+        gap: 20px;
+    }
+    
+    .testimonial-card {
+        padding: 30px 20px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Header */
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #FFFFFF;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        padding: 20px;
+        align-items: flex-start;
+    }
+    
+    .nav-list li {
+        margin: 0 0 15px 0;
+        width: 100%;
+    }
+    
+    .nav-list a {
+        padding: 10px 0;
+        width: 100%;
+    }
+    
+    .nav-list a.buy-now {
+        margin-left: 0;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+        order: 2;
+    }
+    
+    .hero-image {
+        order: 1;
+        margin-bottom: 40px;
+    }
+    
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    
+    .break-line {
+        display: inline;
+    }
+    
+    .hero-text .description {
+        font-size: 16px;
+    }
+    
+    /* How It Works */
+    .how-it-works {
+        padding: 60px 0;
+    }
+    
+    .how-it-works-cards {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 25px;
+    }
+    
+    .how-it-works-card {
+        min-height: auto;
+        padding: 30px 20px;
+    }
+    
+    .card-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+    
+    .card-content h3 {
+        font-size: 20px;
+    }
+    
+    .card-content p {
+        font-size: 14px;
+    }
+    
+    /* What We Do */
+    .what-we-do {
+        padding: 60px 0;
+    }
+    
+    .what-we-do-content {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .what-we-do-text {
+        max-width: 100%;
+        order: 2;
+    }
+    
+    .what-we-do-text h3 {
+        font-size: 32px;
+    }
+    
+    .what-we-do-text p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    
+    .what-we-do-image {
+        order: 1;
+    }
+    
+    .what-we-do-image img {
+        max-width: 300px;
+    }
+    
+    /* Features */
+    .features {
+        padding: 60px 0;
+    }
+    
+    .features-header {
+        margin-bottom: 40px;
+    }
+    
+    .features-header h3 {
+        font-size: 28px;
+    }
+    
+    .feature-card {
+        padding: 30px 20px;
+        min-height: auto;
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .feature-content h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .feature-content p {
+        font-size: 14px;
+    }
+    
+    /* Testimonials */
+    .testimonials {
+        padding: 60px 0;
+    }
+    
+    .testimonials-header {
+        margin-bottom: 50px;
+    }
+    
+    .testimonials-header h3 {
+        font-size: 28px;
+    }
+    
+    .testimonials-header p {
+        font-size: 16px;
+    }
+    
+    .testimonials-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .testimonial-card {
+        padding: 30px 20px;
+    }
+    
+    .stars {
+        margin-bottom: 20px;
+    }
+    
+    .star {
+        font-size: 18px;
+    }
+    
+    .testimonial-text {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .author {
+        gap: 12px;
+    }
+    
+    .author-avatar {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .author-info h4 {
+        font-size: 15px;
+    }
+    
+    .author-info span {
+        font-size: 13px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 40px 0 20px 0;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+    
+    .footer-description {
+        max-width: 100%;
+    }
+    
+    .contact-info {
+        align-items: center;
+    }
+    
+    .email-input {
+        max-width: 100%;
+    }
+    
+    .subscribe-text {
+        max-width: 100%;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .footer-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    /* Header */
+    .logo {
+        font-size: 20px;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 40px 0;
+    }
+    
+    .hero-text h1 {
+        font-size: 28px;
+    }
+    
+    .hero-text .description {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    
+    .button {
+        padding: 14px 28px;
+        font-size: 14px;
+    }
+    
+    /* How It Works */
+    .how-it-works {
+        padding: 40px 0;
+    }
+    
+    .how-it-works-cards {
+        padding: 30px 15px;
+    }
+    
+    .how-it-works-card {
+        padding: 25px 15px;
+    }
+    
+    .card-image {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+    }
+    
+    .card-content h3 {
+        font-size: 18px;
+    }
+    
+    /* What We Do */
+    .what-we-do {
+        padding: 40px 0;
+    }
+    
+    .what-we-do-text h3 {
+        font-size: 24px;
+    }
+    
+    .what-we-do-text p {
+        font-size: 14px;
+    }
+    
+    .what-we-do-image img {
+        max-width: 250px;
+    }
+    
+    /* Features */
+    .features {
+        padding: 40px 0;
+    }
+    
+    .features-header {
+        margin-bottom: 30px;
+    }
+    
+    .features-header h3 {
+        font-size: 24px;
+    }
+    
+    .features-header p {
+        font-size: 14px;
+    }
+    
+    .feature-card {
+        padding: 25px 15px;
+    }
+    
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .feature-content h4 {
+        font-size: 15px;
+    }
+    
+    .feature-content p {
+        font-size: 13px;
+    }
+    
+    /* Testimonials */
+    .testimonials {
+        padding: 40px 0;
+    }
+    
+    .testimonials-header {
+        margin-bottom: 40px;
+    }
+    
+    .testimonials-header h3 {
+        font-size: 24px;
+    }
+    
+    .testimonials-header p {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+    
+    .testimonial-card {
+        padding: 25px 15px;
+    }
+    
+    .author-avatar {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .author-info h4 {
+        font-size: 14px;
+    }
+    
+    .author-info span {
+        font-size: 12px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 30px 0 15px 0;
+    }
+    
+    .footer-content {
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-logo {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .footer-description {
+        font-size: 14px;
+    }
+    
+    .footer-title {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-address,
+    .contact-phone,
+    .contact-email {
+        font-size: 14px;
+    }
+    
+    .email-input {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+    
+    .subscribe-btn {
+        padding: 10px 24px;
+        font-size: 13px;
+    }
+    
+    .subscribe-text {
+        font-size: 13px;
+    }
+    
+    .footer-copyright {
+        font-size: 13px;
+    }
+    
+    .footer-nav ul {
+        gap: 10px;
+    }
+    
+    .footer-nav a {
+        font-size: 13px;
+    }
+}
+
+/* Large Desktops */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-image img,
+    .what-we-do-image img,
+    .feature-icon img,
+    .card-image img,
+    .author-avatar img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .nav-menu,
+    .mobile-menu-toggle,
+    .button,
+    .footer-nav,
+    .subscribe-form {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .hero,
+    .how-it-works,
+    .what-we-do,
+    .features,
+    .testimonials {
+        padding: 20pt 0 !important;
+        page-break-inside: avoid;
+    }
+}

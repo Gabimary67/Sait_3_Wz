@@ -1,13 +1,17 @@
-body {
-    font-family: 'Poppins', sans-serif;
+/* Базовые стили */
+* {
     margin: 0;
     padding: 0;
-    /* Основной фон, как на изображении (светло-фиолетовый градиент) */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
     background: #F7FAFF;
     color: #23262F;
     font-size: 16px;
     line-height: 1.5;
-    min-height: 100vh; /* Для растягивания body на всю высоту */
+    min-height: 100vh;
 }
 
 .container {
@@ -19,6 +23,11 @@ body {
 /* Header */
 header {
     padding: 20px 0;
+    background: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header .container {
@@ -33,7 +42,7 @@ header .container {
     color: #23262F;
 }
 
-nav ul {
+.nav-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -41,29 +50,56 @@ nav ul {
     align-items: center;
 }
 
-nav li {
+.nav-list li {
     margin-left: 30px;
 }
 
-nav a {
+.nav-list a {
     text-decoration: none;
     color: #777E90;
     font-weight: 500;
     font-size: 14px;
     display: flex;
     align-items: center;
+    transition: color 0.3s ease;
 }
 
-nav a svg {
+.nav-list a:hover {
+    color: #23262F;
+}
+
+.nav-list a svg {
     margin-left: 5px;
 }
 
-nav a.buy-now {
+.nav-list a.buy-now {
     background-color: #23262F;
     color: white;
     padding: 12px 24px;
     border-radius: 90px;
-    margin-left: 40px; /* Немного больше отступа для кнопки */
+    margin-left: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list a.buy-now:hover {
+    background-color: #3A3F4D;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 24px;
+    height: 18px;
+    justify-content: space-between;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #23262F;
+    transition: all 0.3s ease;
 }
 
 /* Hero Section */
@@ -76,10 +112,12 @@ nav a.buy-now {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 40px;
 }
 
 .hero-text {
-    width: 50%;
+    flex: 1;
+    max-width: 600px;
 }
 
 .discount {
@@ -88,10 +126,11 @@ nav a.buy-now {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    font-size: 14px;
 }
 
 .discount svg {
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 .hero-text h1 {
@@ -99,11 +138,17 @@ nav a.buy-now {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 20px;
+    color: #23262F;
+}
+
+.break-line {
+    display: block;
 }
 
 .hero-text .description {
     color: #777E90;
     font-size: 18px;
+    line-height: 1.6;
     margin-bottom: 40px;
 }
 
@@ -116,128 +161,32 @@ nav a.buy-now {
     font-weight: 600;
     display: inline-block;
     transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .button:hover {
-    background-color: #d1441a; /* Немного темнее при наведении */
+    background-color: #d1441a;
 }
 
 .hero-image {
-    width: 45%;
-    /* На изображении есть легкая тень или градиент в фоне.
-       Это сложнее точно повторить без исходников, но можно попробовать: */
-    position: relative;
-    padding-bottom: 20px; /* Чтобы тень не обрезалась */
-}
-.hero-image img {
-    width: 100%;
-    display: block;
-    /* Возможная тень, если hero-image.png сам не содержит */
-    filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.1));
-}
-
-
-/* НОВЫЙ БЛОК: How it works */
-/* HOW IT WORKS - ТРИ КАРТОЧКИ В ОДНУ СТРОКУ */
-.how-it-works {
-    padding: 80px 0;
-    background: #F7FAFF;
-}
-
-/* WHAT WE DO SECTION */
-.what-we-do {
-    padding: 100px 0;
-    background: #F7FAFF; /* Однородный фон как у других секций */
-}
-
-.what-we-do-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-}
-
-.what-we-do-text {
-    flex: 1;
-    max-width: 500px;
-    order: 2;
-    text-align: left;
-}
-
-.what-we-do-text h2 {
-    font-size: 14px;
-    font-weight: 600;
-    color: #F4511E;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0 0 20px 0;
-}
-
-.what-we-do-text h3 {
-    font-size: 40px;
-    font-weight: 700;
-    color: #23262F;
-    line-height: 1.2;
-    margin: 0 0 25px 0;
-}
-
-.what-we-do-text p {
-    font-size: 16px;
-    color: #777E90;
-    line-height: 1.7;
-    margin: 0 0 40px 0;
-}
-
-.what-we-do-image {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    order: 1;
 }
 
-.what-we-do-image img {
-    width: 100%;
-    max-width: 500px;
+.hero-image img {
+    max-width: 100%;
     height: auto;
-    border-radius: 20px;
-    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.1));
 }
 
-/* Адаптивность для What We Do */
-@media (max-width: 768px) {
-    .what-we-do {
-        padding: 60px 0;
-    }
-    
-    .what-we-do-content {
-        flex-direction: column;
-        gap: 40px;
-        text-align: center;
-    }
-    
-    .what-we-do-text {
-        max-width: 100%;
-        order: 2;
-        text-align: center;
-    }
-    
-    .what-we-do-text h3 {
-        font-size: 32px;
-    }
-    
-    .what-we-do-text p {
-        font-size: 14px;
-        margin-bottom: 30px;
-    }
-    
-    .what-we-do-image {
-        order: 1;
-    }
-    
-    .what-we-do-image img {
-        max-width: 300px;
-    }
+/* How It Works Section */
+.how-it-works {
+    padding: 80px 0;
+    background: #F7FAFF;
 }
 
 .how-it-works-cards {
@@ -278,13 +227,10 @@ nav a.buy-now {
     justify-content: center;
 }
 
-/* Большие картинки без фона */
 .card-image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: none;
-    background: transparent;
 }
 
 .card-content {
@@ -309,38 +255,153 @@ nav a.buy-now {
     margin: 0;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    .how-it-works {
-        padding: 60px 0;
-    }
-    
-    .how-it-works-cards {
-        flex-direction: column;
-        padding: 40px 20px;
-        gap: 25px;
-    }
-    
-    .how-it-works-card {
-        min-height: auto;
-        padding: 30px 20px;
-    }
-    
-    .card-image {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 20px;
-    }
-    
-    .card-content h3 {
-        font-size: 20px;
-    }
-    
-    .card-content p {
-        font-size: 14px;
-    }
+/* What We Do Section */
+.what-we-do {
+    padding: 100px 0;
+    background: #F7FAFF;
 }
-/* TESTIMONIALS SECTION */
+
+.what-we-do-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.what-we-do-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.what-we-do-text h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #F4511E;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+}
+
+.what-we-do-text h3 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #23262F;
+    line-height: 1.2;
+    margin: 0 0 25px 0;
+}
+
+.what-we-do-text p {
+    font-size: 16px;
+    color: #777E90;
+    line-height: 1.7;
+    margin: 0 0 40px 0;
+}
+
+.what-we-do-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.what-we-do-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* Features Section */
+.features {
+    padding: 100px 0;
+    background: #FFFFFF;
+}
+
+.features-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+}
+
+.features-header h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #F4511E;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 15px 0;
+}
+
+.features-header p {
+    font-size: 16px;
+    color: #777E90;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.features-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 25px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #F1F1F1;
+    min-height: 280px;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.feature-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-content h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #23262F;
+    margin: 0 0 15px 0;
+}
+
+.feature-content p {
+    font-size: 14px;
+    color: #777E90;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Testimonials Section */
 .testimonials {
     padding: 100px 0;
     background: #FFFFFF;
@@ -349,7 +410,7 @@ nav a.buy-now {
 .testimonials-header {
     text-align: center;
     max-width: 600px;
-    margin: 0 auto 80px auto; /* Увеличили отступ снизу */
+    margin: 0 auto 80px auto;
 }
 
 .testimonials-header h2 {
@@ -404,7 +465,7 @@ nav a.buy-now {
 }
 
 .star {
-    color: #FFD700; /* Золотые звезды */
+    color: #FFD700;
     font-size: 20px;
     margin: 0 2px;
 }
@@ -422,7 +483,6 @@ nav a.buy-now {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    flex-direction: row-reverse;
 }
 
 .author-avatar {
@@ -440,12 +500,12 @@ nav a.buy-now {
 }
 
 .author-info {
-    text-align: right;
+    text-align: left;
 }
 
 .author-info h4 {
     font-size: 16px;
-    font-weight: 700; /* Жирный шрифт для имен */
+    font-weight: 700;
     color: #23262F;
     margin: 0 0 2px 0;
 }
@@ -455,521 +515,7 @@ nav a.buy-now {
     color: #777E90;
 }
 
-/* Адаптивность для Testimonials */
-@media (max-width: 1024px) {
-    .testimonials-header {
-        margin-bottom: 60px;
-    }
-    
-    .testimonials-header h3 {
-        font-size: 32px;
-    }
-    
-    .testimonials-cards {
-        gap: 20px;
-    }
-    
-    .testimonial-card {
-        padding: 30px 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .testimonials {
-        padding: 60px 0;
-    }
-    
-    .testimonials-header {
-        margin-bottom: 50px;
-    }
-    
-    .testimonials-header h3 {
-        font-size: 28px;
-    }
-    
-    .testimonials-header p {
-        font-size: 16px;
-    }
-    
-    .testimonials-cards {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .testimonial-card {
-        padding: 30px 20px;
-    }
-    
-    .stars {
-        margin-bottom: 20px;
-    }
-    
-    .star {
-        font-size: 18px;
-    }
-    
-    .testimonial-text {
-        font-size: 15px;
-        margin-bottom: 20px;
-    }
-    
-    .author {
-        gap: 12px;
-        flex-direction: row-reverse;
-    }
-    
-    .author-avatar {
-        width: 45px;
-        height: 45px;
-    }
-    
-    .author-info h4 {
-        font-size: 15px;
-    }
-    
-    .author-info span {
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 480px) {
-    .testimonials {
-        padding: 50px 0;
-    }
-    
-    .testimonials-header {
-        margin-bottom: 40px;
-    }
-    
-    .testimonials-header h3 {
-        font-size: 24px;
-    }
-    
-    .testimonials-header p {
-        font-size: 14px;
-        margin-bottom: 25px;
-    }
-    
-    .testimonial-card {
-        padding: 25px 15px;
-    }
-    
-    .author-avatar {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .author-info h4 {
-        font-size: 14px;
-    }
-    
-    .author-info span {
-        font-size: 12px;
-    }
-}
-
-/* FEATURES SECTION */
-.features {
-    padding: 100px 0;
-    background: #FFFFFF;
-}
-
-.features-header {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 60px auto;
-}
-
-.features-header h2 {
-    font-size: 14px;
-    font-weight: 600;
-    color: #F4511E;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0 0 15px 0;
-}
-
-.features-header h3 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #23262F;
-    margin: 0 0 20px 0;
-    line-height: 1.2;
-}
-
-.features-header p {
-    font-size: 16px;
-    color: #777E90;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.features-cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 30px;
-}
-
-.feature-card {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 40px 25px;
-    background: #FFFFFF;
-    border-radius: 16px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    border: 1px solid #F1F1F1;
-    min-height: 280px;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.feature-icon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.feature-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    background: transparent;
-}
-
-.feature-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.feature-content h4 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #23262F;
-    margin: 0 0 15px 0;
-    text-transform: capitalize;
-}
-
-.feature-content p {
-    font-size: 14px;
-    color: #777E90;
-    line-height: 1.5;
-    margin: 0;
-}
-
-/* Адаптивность для Features */
-@media (max-width: 1024px) {
-    .features-cards {
-        gap: 20px;
-    }
-    
-    .feature-card {
-        padding: 30px 20px;
-        min-height: 250px;
-    }
-    
-    .feature-icon {
-        width: 70px;
-        height: 70px;
-        margin-bottom: 20px;
-    }
-    
-    .feature-content h4 {
-        font-size: 16px;
-    }
-    
-    .feature-content p {
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 768px) {
-    .features {
-        padding: 60px 0;
-    }
-    
-    .features-header {
-        margin-bottom: 40px;
-    }
-    
-    .features-header h3 {
-        font-size: 28px;
-    }
-    
-    .features-cards {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .feature-card {
-        padding: 30px 20px;
-        min-height: auto;
-    }
-    
-    .feature-icon {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 20px;
-    }
-    
-    .feature-content h4 {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-    
-    .feature-content p {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .features {
-        padding: 50px 0;
-    }
-    
-    .features-header {
-        margin-bottom: 30px;
-    }
-    
-    .features-header h3 {
-        font-size: 24px;
-    }
-    
-    .features-header p {
-        font-size: 14px;
-    }
-    
-    .feature-card {
-        padding: 25px 15px;
-    }
-    
-    .feature-icon {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 15px;
-    }
-    
-    .feature-content h4 {
-        font-size: 15px;
-    }
-    
-    .feature-content p {
-        font-size: 13px;
-    }
-}
-
-/* FAQ SECTION - TWO COLUMNS */
-.faq {
-    padding: 100px 0;
-    background: #FFFFFF;
-}
-
-.faq-header {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 60px auto;
-}
-
-.faq-header h2 {
-    font-size: 14px;
-    font-weight: 600;
-    color: #F4511E;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0 0 15px 0;
-}
-
-.faq-header h3 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #23262F;
-    margin: 0 0 20px 0;
-    line-height: 1.2;
-}
-
-.faq-header p {
-    font-size: 16px;
-    color: #777E90;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.faq-content {
-    max-width: 1000px; /* Увеличиваем максимальную ширину для двух колонок */
-    margin: 0 auto;
-}
-
-.faq-columns {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-}
-
-.faq-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0; /* Убираем gap между элементами, так как у них уже есть границы */
-}
-
-.faq-accordion {
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
-    border: 1px solid #F1F1F1;
-}
-
-.faq-item {
-    border-bottom: 1px solid #F1F1F1;
-    background: #FFFFFF;
-}
-
-.faq-item:last-child {
-    border-bottom: none;
-}
-
-.faq-question {
-    padding: 25px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.faq-question:hover {
-    background: #F8F9FA;
-}
-
-.faq-question h4 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #23262F;
-    margin: 0;
-    flex: 1;
-}
-
-.faq-toggle {
-    font-size: 24px;
-    font-weight: 300;
-    color: #23262F;
-    transition: transform 0.3s ease;
-    margin-left: 20px;
-    flex-shrink: 0;
-}
-
-.faq-answer {
-    padding: 0 30px;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.faq-answer p {
-    font-size: 16px;
-    color: #777E90;
-    line-height: 1.6;
-    margin: 0 0 25px 0;
-}
-
-/* Активное состояние аккордеона */
-.faq-item.active .faq-answer {
-    max-height: 200px;
-    padding: 0 30px 25px 30px;
-}
-
-.faq-item.active .faq-toggle {
-    transform: rotate(45deg);
-}
-
-/* Адаптивность для FAQ с двумя колонками */
-@media (max-width: 768px) {
-    .faq {
-        padding: 60px 0;
-    }
-    
-    .faq-header {
-        margin-bottom: 40px;
-    }
-    
-    .faq-header h3 {
-        font-size: 28px;
-    }
-    
-    .faq-columns {
-        flex-direction: column;
-        gap: 0;
-    }
-    
-    .faq-column {
-        width: 100%;
-    }
-    
-    .faq-question {
-        padding: 20px;
-    }
-    
-    .faq-question h4 {
-        font-size: 16px;
-    }
-    
-    .faq-toggle {
-        font-size: 20px;
-    }
-    
-    .faq-answer {
-        padding: 0 20px;
-    }
-    
-    .faq-item.active .faq-answer {
-        padding: 0 20px 20px 20px;
-    }
-    
-    .faq-answer p {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .faq {
-        padding: 50px 0;
-    }
-    
-    .faq-header h3 {
-        font-size: 24px;
-    }
-    
-    .faq-header p {
-        font-size: 14px;
-    }
-    
-    .faq-question {
-        padding: 18px 15px;
-    }
-    
-    .faq-question h4 {
-        font-size: 15px;
-    }
-    
-    .faq-toggle {
-        font-size: 18px;
-        margin-left: 15px;
-    }
-}
-
-/* FOOTER SECTION */
+/* Footer */
 .footer {
     background: #23262F;
     color: #FFFFFF;
@@ -1128,116 +674,4 @@ nav a.buy-now {
 
 .footer-nav a:hover {
     color: #FFFFFF;
-}
-
-/* Адаптивность для Footer */
-@media (max-width: 1024px) {
-    .footer-content {
-        gap: 30px;
-    }
-    
-    .footer-nav ul {
-        gap: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .footer {
-        padding: 40px 0 20px 0;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        gap: 40px;
-        margin-bottom: 40px;
-    }
-    
-    .footer-column {
-        text-align: center;
-    }
-    
-    .footer-description {
-        max-width: 100%;
-    }
-    
-    .contact-info {
-        align-items: center;
-    }
-    
-    .email-input {
-        max-width: 100%;
-    }
-    
-    .subscribe-text {
-        max-width: 100%;
-    }
-    
-    .footer-bottom {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-    
-    .footer-nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer {
-        padding: 30px 0 15px 0;
-    }
-    
-    .footer-content {
-        gap: 30px;
-        margin-bottom: 30px;
-    }
-    
-    .footer-logo {
-        font-size: 28px;
-        margin-bottom: 15px;
-    }
-    
-    .footer-description {
-        font-size: 14px;
-    }
-    
-    .footer-title {
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-    
-    .contact-address,
-    .contact-phone,
-    .contact-email {
-        font-size: 14px;
-    }
-    
-    .email-input {
-        padding: 10px 14px;
-        font-size: 13px;
-    }
-    
-    .subscribe-btn {
-        padding: 10px 24px;
-        font-size: 13px;
-    }
-    
-    .subscribe-text {
-        font-size: 13px;
-    }
-    
-    .footer-copyright {
-        font-size: 13px;
-    }
-    
-    .footer-nav ul {
-        gap: 10px;
-    }
-    
-    .footer-nav a {
-        font-size: 13px;
-    }
 }
