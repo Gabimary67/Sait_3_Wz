@@ -45,51 +45,72 @@
         padding: 0 15px;
     }
     
-    /* Header */
+    /* Header - Fixed Mobile Navigation */
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 0;
         left: 0;
         width: 100%;
+        height: 100vh;
         background: #FFFFFF;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        transform: translateY(-100%);
+        transform: translateX(-100%);
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
         z-index: 999;
+        overflow-y: auto;
+        padding: 80px 20px 20px;
     }
     
     .nav-menu.active {
-        transform: translateY(0);
+        transform: translateX(0);
         opacity: 1;
         visibility: visible;
     }
     
     .nav-list {
         flex-direction: column;
-        padding: 20px;
         align-items: flex-start;
+        gap: 0;
     }
     
     .nav-list li {
-        margin: 0 0 15px 0;
+        margin: 0;
         width: 100%;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    
+    .nav-list li:last-child {
+        border-bottom: none;
+        margin-top: 20px;
     }
     
     .nav-list a {
-        padding: 10px 0;
+        padding: 15px 0;
         width: 100%;
+        font-size: 16px;
+        justify-content: space-between;
     }
     
     .nav-list a.buy-now {
         margin-left: 0;
         text-align: center;
         justify-content: center;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 12px;
     }
     
     .mobile-menu-toggle {
         display: flex;
+        z-index: 1000;
+        position: relative;
+    }
+    
+    .mobile-menu-toggle span {
+        background-color: #23262F;
+        transition: all 0.3s ease;
     }
     
     .mobile-menu-toggle.active span:nth-child(1) {
@@ -104,14 +125,15 @@
         transform: rotate(-45deg) translate(6px, -6px);
     }
     
-    /* Hero Section */
+    /* Hero Section - Fixed Layout */
     .hero {
-        padding: 60px 0;
+        padding: 40px 0 60px;
     }
     
     .hero .container {
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
+        gap: 30px;
     }
     
     .hero-text {
@@ -121,19 +143,39 @@
     
     .hero-image {
         order: 1;
-        margin-bottom: 40px;
+        margin-bottom: 0;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
     }
     
     .hero-text h1 {
-        font-size: 36px;
+        font-size: 32px;
+        line-height: 1.3;
+        margin-bottom: 15px;
     }
     
     .break-line {
-        display: inline;
+        display: block;
+        margin-top: 8px;
+    }
+    
+    .discount {
+        font-size: 14px;
+        justify-content: center;
+        margin-bottom: 15px;
     }
     
     .hero-text .description {
         font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 30px;
     }
     
     /* How It Works */
@@ -143,18 +185,18 @@
     
     .how-it-works-cards {
         flex-direction: column;
-        padding: 40px 20px;
-        gap: 25px;
+        padding: 30px 20px;
+        gap: 20px;
     }
     
     .how-it-works-card {
         min-height: auto;
-        padding: 30px 20px;
+        padding: 25px 20px;
     }
     
     .card-image {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         margin-bottom: 20px;
     }
     
@@ -183,11 +225,12 @@
     }
     
     .what-we-do-text h3 {
-        font-size: 32px;
+        font-size: 28px;
+        line-height: 1.3;
     }
     
     .what-we-do-text p {
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 30px;
     }
     
@@ -196,7 +239,7 @@
     }
     
     .what-we-do-image img {
-        max-width: 300px;
+        max-width: 280px;
     }
     
     /* Features */
@@ -208,12 +251,16 @@
         margin-bottom: 40px;
     }
     
-    .features-header h3 {
-        font-size: 28px;
+    .features-header h2 {
+        font-size: 13px;
+    }
+    
+    .features-header p {
+        font-size: 15px;
     }
     
     .feature-card {
-        padding: 30px 20px;
+        padding: 25px 20px;
         min-height: auto;
     }
     
@@ -224,7 +271,7 @@
     }
     
     .feature-content h4 {
-        font-size: 16px;
+        font-size: 18px;
         margin-bottom: 10px;
     }
     
@@ -335,31 +382,62 @@
 /* Mobile Phones */
 @media (max-width: 480px) {
     .container {
-        padding: 0 10px;
+        padding: 0 12px;
     }
     
     /* Header */
-    .logo {
-        font-size: 20px;
+    header {
+        padding: 15px 0;
     }
     
-    /* Hero Section */
+    .logo {
+        font-size: 22px;
+    }
+    
+    /* Hero Section - Mobile Optimized */
     .hero {
-        padding: 40px 0;
+        padding: 30px 0 50px;
+    }
+    
+    .hero .container {
+        gap: 25px;
     }
     
     .hero-text h1 {
-        font-size: 28px;
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+    
+    .break-line {
+        margin-top: 5px;
+    }
+    
+    .discount {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+    
+    .discount svg {
+        width: 14px;
+        height: 14px;
+        margin-right: 6px;
     }
     
     .hero-text .description {
-        font-size: 14px;
-        margin-bottom: 30px;
+        font-size: 15px;
+        margin-bottom: 25px;
+        line-height: 1.5;
     }
     
     .button {
         padding: 14px 28px;
-        font-size: 14px;
+        font-size: 15px;
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .hero-image {
+        max-width: 250px;
     }
     
     /* How It Works */
@@ -368,21 +446,27 @@
     }
     
     .how-it-works-cards {
-        padding: 30px 15px;
+        padding: 25px 15px;
+        gap: 15px;
     }
     
     .how-it-works-card {
-        padding: 25px 15px;
+        padding: 20px 15px;
     }
     
     .card-image {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         margin-bottom: 15px;
     }
     
     .card-content h3 {
         font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .card-content p {
+        font-size: 13px;
     }
     
     /* What We Do */
@@ -390,16 +474,27 @@
         padding: 40px 0;
     }
     
+    .what-we-do-content {
+        gap: 30px;
+    }
+    
+    .what-we-do-text h2 {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    
     .what-we-do-text h3 {
         font-size: 24px;
+        margin-bottom: 20px;
     }
     
     .what-we-do-text p {
-        font-size: 14px;
+        font-size: 15px;
+        margin-bottom: 25px;
     }
     
     .what-we-do-image img {
-        max-width: 250px;
+        max-width: 220px;
     }
     
     /* Features */
@@ -411,8 +506,8 @@
         margin-bottom: 30px;
     }
     
-    .features-header h3 {
-        font-size: 24px;
+    .features-header h2 {
+        font-size: 12px;
     }
     
     .features-header p {
@@ -420,7 +515,7 @@
     }
     
     .feature-card {
-        padding: 25px 15px;
+        padding: 20px 15px;
     }
     
     .feature-icon {
@@ -430,7 +525,8 @@
     }
     
     .feature-content h4 {
-        font-size: 15px;
+        font-size: 16px;
+        margin-bottom: 8px;
     }
     
     .feature-content p {
@@ -444,6 +540,10 @@
     
     .testimonials-header {
         margin-bottom: 40px;
+    }
+    
+    .testimonials-header h2 {
+        font-size: 12px;
     }
     
     .testimonials-header h3 {
@@ -483,7 +583,7 @@
     }
     
     .footer-logo {
-        font-size: 28px;
+        font-size: 26px;
         margin-bottom: 15px;
     }
     
@@ -503,13 +603,13 @@
     }
     
     .email-input {
-        padding: 10px 14px;
-        font-size: 13px;
+        padding: 12px 14px;
+        font-size: 14px;
     }
     
     .subscribe-btn {
-        padding: 10px 24px;
-        font-size: 13px;
+        padding: 12px 24px;
+        font-size: 14px;
     }
     
     .subscribe-text {
@@ -529,6 +629,33 @@
     }
 }
 
+/* Small Mobile Phones */
+@media (max-width: 360px) {
+    .hero-text h1 {
+        font-size: 24px;
+    }
+    
+    .hero-image {
+        max-width: 200px;
+    }
+    
+    .what-we-do-text h3 {
+        font-size: 22px;
+    }
+    
+    .what-we-do-image img {
+        max-width: 180px;
+    }
+    
+    .features-header h3 {
+        font-size: 22px;
+    }
+    
+    .testimonials-header h3 {
+        font-size: 22px;
+    }
+}
+
 /* Large Desktops */
 @media (min-width: 1440px) {
     .container {
@@ -545,6 +672,34 @@
     .author-avatar img {
         image-rendering: -webkit-optimize-contrast;
         image-rendering: crisp-edges;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .nav-menu {
+        padding: 60px 20px 20px;
+    }
+    
+    .nav-list li {
+        padding: 8px 0;
+    }
+    
+    .hero {
+        padding: 30px 0;
+    }
+    
+    .hero .container {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .hero-text {
+        max-width: 60%;
+    }
+    
+    .hero-image {
+        max-width: 35%;
     }
 }
 
