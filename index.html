@@ -3,282 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toka - Crypto Trading</title>
+    <title>DeXeD - Crypto Arbitrage</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
+    <!-- Header Logo -->
+    <header class="main-header">
         <div class="container">
-            <div class="logo">
-                Toka
-            </div>
-            <nav class="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="#">NFT <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.97168 0.913025L5.22168 5.16303L9.47168 0.913025" stroke="#777E90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-                    <li><a href="#">Crypto <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.97168 0.913025L5.22168 5.16303L9.47168 0.913025" stroke="#777E90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-                    <li><a href="#">About Us <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.97168 0.913025L5.22168 5.16303L9.47168 0.913025" stroke="#777E90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-                    <li><a href="#">Our Team <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.97168 0.913025L5.22168 5.16303L9.47168 0.913025" stroke="#777E90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-                    <li><a href="#">Contact Us <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.97168 0.913025L5.22168 5.16303L9.47168 0.913025" stroke="#777E90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-                    <li><a href="#">Online Shop <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.97168 0.913025L5.22168 5.16303L9.47168 0.913025" stroke="#777E90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-                    <li><a href="#">Blog <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.97168 0.913025L5.22168 5.16303L9.47168 0.913025" stroke="#777E90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-                    <li><a href="#" class="buy-now">Buy Now</a></li>
-                </ul>
-            </nav>
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="header-logo">
+                <img src="4922990243548433174.png" alt="DeXeD Logo" class="logo-img">
+                <span class="logo-text">DeXeD</span>
             </div>
         </div>
     </header>
 
-    <main>
+    <!-- Main Content -->
+    <main class="main-content">
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero-section" id="home">
             <div class="container">
-                <div class="hero-text">
-                    <p class="discount">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.2357 2.00004C7.39853 1.70531 7.72108 1.50004 8.0643 1.50004C8.40752 1.50004 8.73007 1.70531 8.8929 2.00004L12.2262 7.75004C12.389 8.04477 12.7116 8.25004 13.0548 8.25004H15C15.2761 8.25004 15.5 8.47395 15.5 8.75004C15.5 9.02613 15.2761 9.25004 15 9.25004H13.0548C12.7116 9.25004 12.389 9.45531 12.2262 9.75004L8.8929 15.5C8.73007 15.7948 8.40752 16.0001 8.0643 16.0001C7.72108 16.0001 7.39853 15.7948 7.2357 15.5L3.90237 9.75004C3.73954 9.45531 3.41699 9.25004 3.07377 9.25004H1C0.723858 9.25004 0.5 9.02613 0.5 8.75004C0.5 8.47395 0.723858 8.25004 1 8.25004H3.07377C3.41699 8.25004 3.73954 8.04477 3.90237 7.75004L7.2357 2.00004Z" fill="#83DA5E" stroke="#83DA5E" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Наша команда более полутора лет занималась
+                <div class="hero-content">
+                    <!-- Основной заголовок -->
+                    <h1 class="hero-title">
+                        Мы разработали алгоритм арбитража на DEX 
+                        <span class="title-leverage">арбитража на DEX</span>
+                        объединяя опыт трейдеров и разработчиков.
+                    </h1>
+                    
+                    <!-- Подзаголовок -->
+                    <p class="hero-subtitle">
+                        Продукт обеспечивает стабильную прибыль на криптоарбитраже.
                     </p>
-                    <h1>разработкой алгоритма <span class="break-line">арбитража на децентрализованных биржах (DEX).</span></h1>
-                    <p class="description">Объединив опыт профессиональных трейдеров и талантливых разработчиков, мы создали уникальный продукт, который позволяет стабильно получать прибыль на криптовалютном арбитраже.</p>
-                    <a href="#" class="button">Get started</a>
-                </div>
-                <div class="hero-image">
-                    <img src="crypto-bg-img.png" alt="Crypto Trading" />
-                </div>
-            </div>
-        </section>
+                    
+                    <div class="hero-actions">
+                        <a href="tg://resolve/?domain=Richiiee_Ri" class="cta-button" onclick="trackFacebookLead()">
+                            <i class="fab fa-telegram"></i>
+                            Получить бесплатные сделки
+                        </a>
+                    </div>
+                    
 
-        <!-- How It Works Section -->
-        <section class="how-it-works">
-            <div class="container">
-                <div class="how-it-works-cards">
-                    <div class="how-it-works-card">
-                        <div class="card-image">
-                            <img src="lock-crypto.png" alt="Register Icon">
+                    <!-- Дополнительная информация -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">18+</div>
+                            <div class="stat-label">месяцев разработки</div>
                         </div>
-                        <div class="card-content">
-                            <h3>Арбитраж криптовалют</h3>
-                            <p>это простая, но эффективная стратегия</p>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">работа алгоритма</div>
                         </div>
-                    </div>
-                    <div class="how-it-works-card">
-                        <div class="card-image">
-                            <img src="wallet-crypto-icon.png" alt="Connect Wallet Icon">
-                        </div>
-                        <div class="card-content">
-                            <h3>Connect your wallet</h3>
-                            <p>Один и тот же актив покупается на одной бирже дешевле</p>
+                        <div class="stat-item">
+                            <div class="stat-number">DEX</div>
+                            <div class="stat-label">децентрализованные биржи</div>
                         </div>
                     </div>
-                    <div class="how-it-works-card">
-                        <div class="card-image">
-                            <img src="earning-trading.png" alt="Start Trading Icon">
-                        </div>
-                        <div class="card-content">
-                            <h3>Start trading</h3>
-                            <p>Продаётся на другой бирже — чуть дороже.</p>
+
+                    <!-- Image Section -->
+                    <div class="image-section">
+                        <div class="container">
+                            <img src="cripto4.png" alt="DeXeD" class="content-image">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- What We Do Section -->
-        <section class="what-we-do">
+        <!-- Core Assets Section -->
+        <section class="core-assets-section" id="assets">
             <div class="container">
-                <div class="what-we-do-content">
-                    <div class="what-we-do-text">
-                        <h2>Результат</h2>
-                        <h3>Благодаря точным алгоритмам и продуманной стратегии</h3>
-                        <p>наш продукт помогает трейдерам получать стабильную доходность, используя возможности рынка децентрализованных бирж — быстро, безопасно и эффективно.</p>
-                        <a href="#" class="button">Узнать больше</a>
+                <div class="assets-header">
+                    <h2 class="section-title">Как работает арбитраж</h2>
+                    <p class="section-subtitle">Простой процесс получения прибыли на разнице цен</p>
+                    <div class="divider"></div>
+                </div>
+                
+                <!-- Все 6 блоков в одной сетке -->
+                <div class="process-grid">
+                    <!-- Блок 1 -->
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="process-content">
+                            <h3 class="process-title">Покупка</h3>
+                            <p class="process-description">Покупаем актив дешевле на одной бирже</p>
+                        </div>
                     </div>
-                    <div class="what-we-do-image">
-                        <img src="cryptophone.png" alt="Crypto Trading">
+                    
+                    <!-- Блок 2 -->
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="process-content">
+                            <h3 class="process-title">Продажа</h3>
+                            <p class="process-description">Продаём дороже на другой бирже</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Блок 3 -->
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="process-content">
+                            <h3 class="process-title">Время</h3>
+                            <p class="process-description">Сделка занимает 5–10 минут, пока сохраняется ценовая разница</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Блок 4 -->
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="process-content">
+                            <h3 class="process-title">Автоматизация</h3>
+                            <p class="process-description">Алгоритм сам находит лучшие арбитражные возможности</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Блок 5 -->
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="process-content">
+                            <h3 class="process-title">Скорость</h3>
+                            <p class="process-description">Мгновенное исполнение сделок при появлении возможности</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Блок 6 -->
+                    <div class="process-card">
+                        <div class="process-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="process-content">
+                            <h3 class="process-title">Безопасность</h3>
+                            <p class="process-description">Все операции с вашего кошелька без рисков</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Features Section -->
-        <section class="features">
+        <section class="features-section" id="features">
             <div class="container">
                 <div class="features-header">
-                    <h2>Как это работает</h2>
-                    <p>Cryptocurrency markets have seen an increase in volume in recent weeks, which is a great opportunity for new traders.</p>
+                    <h2 class="section-title">Преимущества</h2>
+                    <p class="section-subtitle">Преимущества сотрудничества с нами</p>
+                    <div class="divider"></div>
                 </div>
-                <div class="features-cards">
+                
+                <div class="features-grid">
+                    <!-- Feature 1 -->
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <img src="app03r34.png" alt="Download App">
+                            <i class="fas fa-money-bill-wave"></i>
                         </div>
-                        <div class="feature-content">
-                            <h4>Минимум времени</h4>
-                            <p>на одну сделку требуется всего 5–10 минут.</p>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <img src="cryptomining-hit.png" alt="Register">
-                        </div>
-                        <div class="feature-content">
-                            <h4>Удобство</h4>
-                            <p>все операции можно выполнять прямо с телефона.</p>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <img src="crypto-wallet-hit.png" alt="Connect Wallet">
-                        </div>
-                        <div class="feature-content">
-                            <h4>Безопасность</h4>
-                            <p>вы совершаете сделки со своего личного кошелька, без передачи доступа третьим лицам.</p>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <img src="crypto-trading-hit.png" alt="Start Trading">
-                        </div>
-                        <div class="feature-content">
-                            <h4>Прозрачность</h4>
-                            <p>наша команда формирует сигналы только на основе данных известных и проверенных DEX-площадок.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials">
-            <div class="container">
-                <div class="testimonials-header">
-                    <h2>TESTIMONIALS</h2>
-                    <h3>Millions of users around the world</h3>
-                    <p>It's an exciting time to become a trader.</p>
-                    <a href="#" class="button">Learn more</a>
-                </div>
-                <div class="testimonials-cards">
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <p class="testimonial-text">"Great! This is one of the best apps I have ever used before."</p>
-                        <div class="author">
-                            <div class="author-avatar">
-                                <img src="100-testimonial.png" alt="Adam Watson">
-                            </div>
-                            <div class="author-info">
-                                <h4>Adam Watson</h4>
-                                <span>Barista</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <p class="testimonial-text">"Great! Compared to everything else I've ever used, this is the best app."</p>
-                        <div class="author">
-                            <div class="author-avatar">
-                                <img src="45-testimonial.png" alt="Lisa Smith">
-                            </div>
-                            <div class="author-info">
-                                <h4>Lisa Smith</h4>
-                                <span>Designer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <p class="testimonial-text">"Great! This is one of the best apps I have ever used before."</p>
-                        <div class="author">
-                            <div class="author-avatar">
-                                <img src="98-testimonial.png" alt="Nick Green">
-                            </div>
-                            <div class="author-info">
-                                <h4>Nick Green</h4>
-                                <span>Developer</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-column">
-                        <div class="footer-logo">Toka</div>
-                        <p class="footer-description">
-                            Reinventing the way of creating websites, we aim to create the most master-peaced WordPress theme available on the market.
-                        </p>
-                    </div>
-                    <div class="footer-column">
-                        <h3 class="footer-title">CONTACT US</h3>
-                        <div class="contact-info">
-                            <p class="contact-address">202 Helga Springs Rd, Crawford, TN 38554</p>
-                            <p class="contact-phone">Call Us: <strong>800.275.8777</strong></p>
-                            <a href="mailto:alex@company.com" class="contact-email">alex@company.com</a>
-                        </div>
-                    </div>
-                    <div class="footer-column">
-                        <h3 class="footer-title">SIGN UP FOR EMAIL UPDATES</h3>
-                        <form class="subscribe-form">
-                            <div class="form-group">
-                                <input type="email" placeholder="Your e-mail address" class="email-input" required>
-                            </div>
-                            <button type="submit" class="subscribe-btn">Subscribe</button>
-                        </form>
-                        <p class="subscribe-text">
-                            Sign up with your email address to receive news and updates
-                        </p>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <div class="footer-copyright">
-                        Copyright ©2025 Toka. All rights reserved.
-                    </div>
-                    <nav class="footer-nav">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                        <h3 class="feature-title">Минимум времени</h3>
+                        <ul class="feature-list">
+                            <li>на одну сделку требуется всего 5–10 минут.</li>
                         </ul>
-                    </nav>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Удобство</h3>
+                        <ul class="feature-list">
+                            <li>все операции можно выполнять прямо с телефона.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3 class="feature-title">Безопасность</h3>
+                        <ul class="feature-list">
+                            <li>вы совершаете сделки со своего личного кошелька, без передачи доступа третьим лицам.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Прозрачность</h3>
+                        <ul class="feature-list">
+                            <li>наша команда формирует сигналы только на основе данных известных и проверенных DEX-площадок.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </section>
+
+        <!-- Reviews Slider Section -->
+        <section class="reviews-slider-section" id="reviews">
+            <div class="container">
+                <div class="reviews-header">
+                    <h2 class="section-title">Отзывы наших пользователей</h2>
+                    <p class="section-subtitle">Тысячи трейдеров уже используют наш алгоритм</p>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="slider-container">
+                    <div class="slider-track" id="sliderTrack">
+                        <!-- Слайды будут добавлены через JavaScript -->
+                    </div>
+                    
+                    <!-- Кнопки навигации -->
+                    <button class="slider-btn prev-btn" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next-btn" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section">
+            <div class="container">
+                <div class="results-content">
+                    <h2 class="results-title">Результат</h2>
+                    <div class="results-divider"></div>
+                    <p class="results-description">
+                        Алгоритм помогает трейдерам получать стабильный доход на рынке DEX: быстро, безопасно и эффективно.
+                    </p>
+                    <div class="results-features">
+                        <div class="result-feature">
+                            <i class="fas fa-rocket"></i>
+                            <span>Быстро</span>
+                        </div>
+                        <div class="result-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Безопасно</span>
+                        </div>
+                        <div class="result-feature">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Эффективно</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta-section">
+            <div class="container">
+                <div class="final-cta-content">
+                    <h2 class="final-cta-title">Готовы начать зарабатывать?</h2>
+                    <p class="final-cta-subtitle">Присоединяйтесь к тысячам трейдеров, которые уже используют наш алгоритм</p>
+                    <a href="tg://resolve/?domain=Richiiee_Ri" class="final-cta-button">
+                        <i class="fab fa-telegram"></i>
+                        Начать арбитраж в Telegram
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <script src="main.js"></script>
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-title">DeXeD</h3>
+                    <p class="footer-tagline">Надежный алгоритм арбитража на децентрализованных биржах</p>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-contact">
+                        <span class="contact-icon"><i class="fab fa-telegram"></i></span>
+                        <span class="contact-text">Поддержка: <a href="https://t.me/Richiiee_Ri" target="_blank" class="contact-link">@Richiiee_Ri</a></span>
+                    </div>
+                    <div class="footer-status">
+                        <span class="status-icon"><i class="fas fa-cog"></i></span>
+                        <span class="status-text">Работаем 24/7</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 DeXeD. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
 </body>
 </html>
